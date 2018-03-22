@@ -18,13 +18,15 @@ public class Home extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            out.println("<link rel='icon' href='imagens/favicon.png'>");
+            out.println("<meta charset=\"utf-8\">");
             out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
-            out.println("<title>Juros Easy</title>");
+            out.println("<title>Juros Easy</title>");                
             out.println("</head>");
             out.println("<body>");
             
             out.println("<nav class=\"navbar navbar-dark bg-dark\">");
-                out.println("<a class=\"navbar-brand\" href=\"#\">");
+                out.println("<a class=\"navbar-brand\" href='home.html'>");
                 out.println("<img src=\"imagens/money3.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\">");
                 out.println("Juros Easy");
                 out.println("</a>");
@@ -36,29 +38,41 @@ public class Home extends HttpServlet {
             out.println("</div>");
             out.println("<hr/>");
             out.println("<br>");
+            out.println("<br>");
+            out.println("<br>");
+            out.println("<br>");
             
             out.println("<div class='container' align='center'>");
-                out.println("<div class=\"card\" style=\"width: 18rem;\">");
-                    out.println("<div class=\"card-body\">");
-                        out.println("<h5 class=\"card-title\">Juros Simples</h5>");
-                        out.println("<p class=\"card-text\">Quer realizar o cálculo do seu juros simples? Clique no botão abaixo:</p>");
-                        out.println("<a class=\"btn btn-primary\" href=\"simples.html\" role=\"button\">Clique aqui!</a>");
+                out.println("<div class='row'>");
+                    out.println("<div class='col-sm-6'>");
+                        out.println("<div class='card' style='width: 18rem'>");
+                            out.println("<div class=\"card-body\">");
+                                out.println("<h5 class=\"card-title\">Juros Simples</h5>");
+                                out.println("<p class=\"card-text\">Quer realizar o cálculo do seu juros simples? Clique no botão abaixo:</p>");
+                                out.println("<a class=\"btn btn-primary\" href=\"simples.html\" role=\"button\">Clique aqui!</a>");
+                            out.println("</div>");
                         out.println("</div>");
-                out.println("</div>");
-                out.println("<br>");
+                    out.println("</div>");
 
-                out.println("<div class=\"card\" style=\"width: 18rem;\">");
-                    out.println("<div class=\"card-body\">");
-                        out.println("<h5 class=\"card-title\">Juros Compostos</h5>");
-                        out.println("<p class=\"card-text\">Quer realizar o cálculo do seu juros compostos? Clique no botão abaixo:</p>");
-                        out.println("<a class=\"btn btn-primary\" href=\"compostos.html\" role=\"button\">Clique aqui!</a>");
+                    out.println("<div class='col-sm-6'>");
+                        out.println("<div class='card' style='width: 18rem'>");
+                            out.println("<div class=\"card-body\">");
+                                out.println("<h5 class=\"card-title\">Juros Compostos</h5>");
+                                out.println("<p class=\"card-text\">Quer realizar o cálculo do seu juros compostos? Clique no botão abaixo:</p>");
+                                out.println("<a class=\"btn btn-primary\" href=\"compostos.html\" role=\"button\">Clique aqui!</a>");
+                            out.println("</div>");
                         out.println("</div>");
+                    out.println("</div>");
                 out.println("</div>");
             out.println("</div>");
             
             out.println("<br>");
+            out.println("<br>");
+            out.println("<br>");
+            out.println("<br>");
             out.println("<hr/>");
-            out.println("<footer>");
+            
+            out.println("<footer style=background-color: 'orange'>");
                 out.println("<div class='container'");
                     out.println("<p align='center'>Desenvolvido por Alexandre, Fernando e Rafael");
                     out.println("<p align='center'>Estudantes de Análise e Desenvolvimento de Sistemas na Faculdade de Tecnologia de Praia Grande");
@@ -68,6 +82,7 @@ public class Home extends HttpServlet {
             out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
             out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>");
             out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>");
+            out.println("<src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>");
             out.println("</body>");
             out.println("</html>");
         }
