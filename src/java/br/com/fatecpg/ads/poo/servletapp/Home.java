@@ -45,7 +45,7 @@ public class Home extends HttpServlet {
                             out.println("<div class=\"card-body\">");
                                 out.println("<h5 class=\"card-title h5fonte\">Juros Simples</h5>");
                                 out.println("<h4 class=\"card-text h4fonte\">Quer realizar o cálculo do seu juros simples?<br>Clique no botão abaixo:</h4>");
-                                out.println("<a class=\"h4fonte btn btn-primary\" href=\"simples.html\" role=\"button\">Clique aqui!</a>");
+                                out.println("<a class=\"h4fonte btn btn-primary\" href=\"juros-simples.php\" role=\"button\">Clique aqui!</a>");
                             out.println("</div>");
                         out.println("</div>");
                     out.println("</div>");
