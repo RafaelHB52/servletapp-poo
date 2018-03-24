@@ -18,65 +18,86 @@ public class Home extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<link rel='icon' href='imagens/favicon.png'>");
+            
             out.println("<meta charset=\"utf-8\">");
             out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
+            out.println("<link href=\"https://fonts.googleapis.com/css?family=Quicksand|Varela+Round\" rel=\"stylesheet\">");
+            out.println("<link rel=\"stylesheet\" href=\"css/css.css\">");
+            
             out.println("<title>Juros Easy</title>");                
             out.println("</head>");
             out.println("<body>");
             
             out.println("<nav class=\"navbar navbar-dark bg-dark\">");
                 out.println("<a class=\"navbar-brand\" href='home.html'>");
-                out.println("<img src=\"imagens/money3.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\">");
                 out.println("Juros Easy");
                 out.println("</a>");
             out.println("</nav>");
             
-            out.println("<br>");
-            out.println("<div class='container'");
-            out.println("<p align='center'>A Juros Easy é uma aplicação que possui a finalidade de ajudar você no cálculo do juros de forma rápida e eficiente, basta escolher o tipo de Juros abaixo e em seguida inserir o valor para que o cálculo seja realizado. :)</p>");
-            out.println("</div>");
-            out.println("<hr/>");
-            out.println("<br>");
-            out.println("<br>");
-            out.println("<br>");
-            out.println("<br>");
+            out.println("<br>");     
+            out.println("<h4 class='h4fonte'>A <b>Juros Easy</b> é uma aplicação que possui a finalidade de ajudar você no cálculo do juros de forma rápida e eficiente, basta escolher o tipo de juros abaixo e em seguida inserir os valores necessários para que o cálculo seja realizado. :)</h4>");
+            out.println("<hr/><br><br><br><br>");
             
             out.println("<div class='container' align='center'>");
                 out.println("<div class='row'>");
                     out.println("<div class='col-sm-6'>");
-                        out.println("<div class='card' style='width: 18rem'>");
+                        out.println("<div class='card' style='width: 100%'>");
                             out.println("<div class=\"card-body\">");
-                                out.println("<h5 class=\"card-title\">Juros Simples</h5>");
-                                out.println("<p class=\"card-text\">Quer realizar o cálculo do seu juros simples? Clique no botão abaixo:</p>");
-                                out.println("<a class=\"btn btn-primary\" href=\"simples.html\" role=\"button\">Clique aqui!</a>");
+                                out.println("<h5 class=\"card-title h5fonte\">Juros Simples</h5>");
+                                out.println("<h4 class=\"card-text h4fonte\">Quer realizar o cálculo do seu juros simples?<br>Clique no botão abaixo:</h4>");
+                                out.println("<a class=\"h4fonte btn btn-primary\" href=\"simples.html\" role=\"button\">Clique aqui!</a>");
                             out.println("</div>");
                         out.println("</div>");
                     out.println("</div>");
 
                     out.println("<div class='col-sm-6'>");
-                        out.println("<div class='card' style='width: 18rem'>");
+                        out.println("<div class='card' style='width: 100%'>");
                             out.println("<div class=\"card-body\">");
-                                out.println("<h5 class=\"card-title\">Juros Compostos</h5>");
-                                out.println("<p class=\"card-text\">Quer realizar o cálculo do seu juros compostos? Clique no botão abaixo:</p>");
-                                out.println("<a class=\"btn btn-primary\" href=\"compostos.html\" role=\"button\">Clique aqui!</a>");
+                                out.println("<h5 class=\"card-title h5fonte\">Juros Compostos</h5>");
+                                out.println("<h4 class=\"card-text h4fonte\">Quer realizar o cálculo do seu juros compostos?<br>Clique no botão abaixo:</h4>");
+                                out.println("<a class=\"h4fonte btn btn-primary\" href=\"compostos.html\" role=\"button\">Clique aqui!</a>");
                             out.println("</div>");
                         out.println("</div>");
                     out.println("</div>");
                 out.println("</div>");
             out.println("</div>");
-            
-            out.println("<br>");
-            out.println("<br>");
-            out.println("<br>");
-            out.println("<br>");
-            out.println("<hr/>");
-            
-            out.println("<footer style=background-color: 'orange'>");
-                out.println("<div class='container'");
-                    out.println("<p align='center'>Desenvolvido por Alexandre, Fernando e Rafael");
-                    out.println("<p align='center'>Estudantes de Análise e Desenvolvimento de Sistemas na Faculdade de Tecnologia de Praia Grande");
+            out.println("<br><br><br><br><hr>");
+
+            out.println("<div class=\"container\">");
+                out.println("<h5 class=\"h5fonte\">Desenvolvido por:</h5>");
+            out.println("</div><hr>");
+            out.println("<div class=\"card-group\">");
+                out.println("<div class=\"card\">");
+                    out.println("<br><center><img class=\"rounded-circle img\" src=\"imagens/noimage.png\" alt=\"Alexandre\"></center>");
+                    out.println("<div class=\"card-body\">");
+                        out.println("<h5 class=\"h5fonte\">Alexandre</h5>");
+                        out.println("<h4 class=\"h4fonte\">Estudante de Análise e Desenvolvimento de Sistemas</h4><br>");
+                        out.println("<center><a class=\"h4fonte btn btn-outline-dark\" href=\"https://github.com/AlexRFX\" role=\"button\">GitHub</a></center>");
+                    out.println("</div>");
                 out.println("</div>");
+                
+                out.println("<div class=\"card\">");
+                    out.println("<br><center><img class=\"rounded-circle img\" src=\"imagens/noimage.png\" alt=\"Fernando\"></center>");
+                    out.println("<div class=\"card-body\">");
+                        out.println("<h5 class=\"h5fonte\">Fernando</h5>");
+                        out.println("<h4 class=\"h4fonte\">Estudante de Análise e Desenvolvimento de Sistemas</h4><br>");
+                        out.println("<center><a class=\"h4fonte btn btn-outline-dark\" href=\"https://github.com/Fernando0123\" role=\"button\">GitHub</a></center>");
+                    out.println("</div>");
+                out.println("</div>");
+                
+                out.println("<div class=\"card\">");
+                    out.println("<br><center><img class=\"rounded-circle img\" src=\"imagens/rafael.png\" alt=\"Rafael\"></center>");
+                    out.println("<div class=\"card-body\">");
+                        out.println("<h5 class=\"h5fonte\">Rafael</h5>");
+                        out.println("<h4 class=\"h4fonte\">Estudante de Análise e Desenvolvimento de Sistemas</h4><br>");
+                        out.println("<center><a class=\"h4fonte btn btn-outline-dark\" href=\"https://github.com/RafaelHB52\" role=\"button\">GitHub</a></center>");
+                    out.println("</div>");
+                out.println("</div>");
+            out.println("</div><hr>");
+            
+            out.println("<footer class='foot'>");
+                out.println("<h4 class='h4fonte'>Gostou do aplicativo? Nos mande a sua opinião: <a href=\"mailto:example@example.com\">juroseasy@outlook.com</a></h4>");
+                out.println("<h4 class='h4fonte'>Desenvolvido em: Março/2018</h4>");
             out.println("</footer>");
                         
             out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");

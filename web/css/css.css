@@ -1,0 +1,41 @@
+.h4fonte{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 110%;
+    text-align: center;
+}
+
+.h5fonte{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 130%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navbar{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.border{
+    border-style: solid;
+    border-image-width: #000000;
+    padding: 0px;
+}
+
+.img{
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-image-width: #000000;
+    padding: 8px;
+}
+
+.foot{
+    background-color: #000000;
+    margin: 0px;
+    padding: 1.25em;
+    background-color: #2d2d30;
+    color: white;
+    font-size: .85em;
+}
