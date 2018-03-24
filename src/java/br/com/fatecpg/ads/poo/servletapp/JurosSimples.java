@@ -8,12 +8,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "JurosSimples", urlPatterns = {"/simples.html"})
+@WebServlet(name = "RandomServlet", urlPatterns = {"/juros-simples.php"})
 public class JurosSimples extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            
+            
             
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -21,7 +23,29 @@ public class JurosSimples extends HttpServlet {
             out.println("<title>Juros Simples</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet JurosSimples at " + request.getContextPath() + "</h1>");
+            out.println("<a href = 'home.html'><h4>Voltar</h4></a>");
+            out.println("<h2>Digite o valor</h2>");
+            out.println("<form>");
+            out.println("Valor Capital: <input type='number' value='c' />");
+            out.println("Valor Taxa: <input type='number' value='tx' />");
+            out.println("Tempo (Meses): <input type='number' value='t' />");
+            out.println("<input type='submit' value='Calcular' />");
+            out.println("</form>");
+            out.println("<hr/>");
+            
+            
+            try{
+             double c = 0;
+             double tx = 0;
+             double t = 0;
+                
+                    double j = (c*tx*t)/100;
+                    out.println("Juros simples: "+j);
+                
+                }catch(Exception ex){
+                out.println("Entrar com um valor válido acima.");
+            }
+            
             out.println("</body>");
             out.println("</html>");
         }
