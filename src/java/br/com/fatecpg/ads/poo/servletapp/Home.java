@@ -59,7 +59,7 @@ public class Home extends HttpServlet {
                             out.println("<div class=\"card-body\">");
                                 out.println("<h5 class=\"card-title h5fonte\">Juros Compostos</h5>");
                                 out.println("<h4 class=\"card-text h4fonte\">Quer realizar o cálculo do seu juros compostos?<br>Clique no botão abaixo:</h4>");
-                                out.println("<a class=\"h4fonte btn btn-primary\" href=\"compostos.html\" role=\"button\">Clique aqui!</a>");
+                                out.println("<a class=\"h4fonte btn btn-primary\" href=\"compostos.php\" role=\"button\">Clique aqui!</a>");
                             out.println("</div>");
                         out.println("</div>");
                     out.println("</div>");
@@ -75,7 +75,7 @@ public class Home extends HttpServlet {
             /* INICIO CARDS DESENVOLVEDORES */
             out.println("<div class=\"card-group\">");
                 out.println("<div class=\"card\">");
-                    out.println("<br><center><img class=\"rounded-circle img\" src=\"imagens/noimage.png\" alt=\"Alexandre\"></center>");
+                    out.println("<br><center><img class=\"rounded-circle img\" src=\"imagens/alexandre.png\" alt=\"Alexandre\"></center>");
                     out.println("<div class=\"card-body\">");
                         out.println("<h5 class=\"h5fonte\">Alexandre</h5>");
                         out.println("<h4 class=\"h4fonte\">Estudante de Análise e Desenvolvimento de Sistemas</h4><br>");

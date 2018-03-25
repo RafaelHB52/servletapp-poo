@@ -38,7 +38,7 @@ public class JurosSimples extends HttpServlet {
             out.println("</nav>");
             /* FIM NAVBAR */
             
-                out.println("<a href ='home.html'><h4 class='botaovoltar'>Voltar</h4></a><hr>");
+                out.println("<a href=\"home.html\"><img border=\"0\" alt=\"voltar\" src=\"imagens/voltar.jpg\" width=\"168\" height=\"86\"></a><hr>");
             
             /* INICIO CARD */
             out.println("<center><div class='col-sm-6'>");
@@ -87,7 +87,6 @@ public class JurosSimples extends HttpServlet {
                 out.println("<h4 class='h4fonte'>Gostou do aplicativo? Nos mande a sua opinião: <a href=\"mailto:example@example.com\">juroseasy@outlook.com</a></h4>");
                 out.println("<h4 class='h4fonte'>Desenvolvido em: Março/2018</h4>");
             out.println("</footer>");
-            out.println("qw");
             
             /* FIM RODAPÉ */
             
