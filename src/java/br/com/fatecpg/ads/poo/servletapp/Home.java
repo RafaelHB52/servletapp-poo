@@ -19,6 +19,7 @@ public class Home extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             
+            /* CSS */
             out.println("<meta charset=\"utf-8\">");
             out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
             out.println("<link href=\"https://fonts.googleapis.com/css?family=Quicksand|Varela+Round\" rel=\"stylesheet\">");
@@ -28,16 +29,19 @@ public class Home extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             
+            /* INICIO NAVBAR */
             out.println("<nav class=\"navbar navbar-dark bg-dark\">");
                 out.println("<a class=\"navbar-brand\" href='home.html'>");
                 out.println("Juros Easy");
                 out.println("</a>");
             out.println("</nav>");
+            /* FIM NAVBAR */
             
             out.println("<br>");     
             out.println("<h4 class='h4fonte'>A <b>Juros Easy</b> é uma aplicação que possui a finalidade de ajudar você no cálculo do juros de forma rápida e eficiente, basta escolher o tipo de juros abaixo e em seguida inserir os valores necessários para que o cálculo seja realizado. :)</h4>");
             out.println("<hr/><br><br><br><br>");
             
+            /* INICIO CARDS JUROS */
             out.println("<div class='container' align='center'>");
                 out.println("<div class='row'>");
                     out.println("<div class='col-sm-6'>");
@@ -62,10 +66,13 @@ public class Home extends HttpServlet {
                 out.println("</div>");
             out.println("</div>");
             out.println("<br><br><br><br><hr>");
+            /* FIM CARDS DESENVOLVEDORES */
 
             out.println("<div class=\"container\">");
                 out.println("<h5 class=\"h5fonte\">Desenvolvido por:</h5>");
             out.println("</div><hr>");
+            
+            /* INICIO CARDS DESENVOLVEDORES */
             out.println("<div class=\"card-group\">");
                 out.println("<div class=\"card\">");
                     out.println("<br><center><img class=\"rounded-circle img\" src=\"imagens/noimage.png\" alt=\"Alexandre\"></center>");
@@ -94,16 +101,21 @@ public class Home extends HttpServlet {
                     out.println("</div>");
                 out.println("</div>");
             out.println("</div><hr>");
+            /* FIM CARDS DESENVOLVEDORES */
             
+            /* INICIO RODAPÉ */
             out.println("<footer class='foot'>");
                 out.println("<h4 class='h4fonte'>Gostou do aplicativo? Nos mande a sua opinião: <a href=\"mailto:example@example.com\">juroseasy@outlook.com</a></h4>");
                 out.println("<h4 class='h4fonte'>Desenvolvido em: Março/2018</h4>");
             out.println("</footer>");
-                        
+            /* FIM RODAPÉ */
+            
+            /* SCRIPTS */
             out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
             out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>");
             out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>");
             out.println("<src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>");
+            
             out.println("</body>");
             out.println("</html>");
         }

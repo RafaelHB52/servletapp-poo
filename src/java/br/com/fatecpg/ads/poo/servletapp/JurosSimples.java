@@ -2,6 +2,7 @@ package br.com.fatecpg.ads.poo.servletapp;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DecimalFormat;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,36 +16,84 @@ public class JurosSimples extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             
-            
-            
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Juros Simples</title>");            
+            
+            /* CSS */
+            out.println("<meta charset=\"utf-8\">");
+            out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
+            out.println("<link href=\"https://fonts.googleapis.com/css?family=Quicksand|Varela+Round\" rel=\"stylesheet\">");
+            out.println("<link rel=\"stylesheet\" href=\"css/css.css\">");
+            
+            out.println("<title>Juros Easy</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<a href = 'home.html'><h4>Voltar</h4></a>");
-            out.println("<h2>Digite o valor</h2>");
-            out.println("<form>");
-            out.println("Valor Capital: <input type='number' value='c' />");
-            out.println("Valor Taxa: <input type='number' value='tx' />");
-            out.println("Tempo (Meses): <input type='number' value='t' />");
-            out.println("<input type='submit' value='Calcular' />");
-            out.println("</form>");
-            out.println("<hr/>");
             
+            /* INICIO NAVBAR */
+            out.println("<nav class=\"navbar navbar-dark bg-dark\">");
+                out.println("<a class=\"navbar-brand\" href='home.html'>");
+                out.println("Juros Easy");
+                out.println("</a>");
+            out.println("</nav>");
+            /* FIM NAVBAR */
             
+                out.println("<a href ='home.html'><h4 class='botaovoltar'>Voltar</h4></a><hr>");
+            
+            /* INICIO CARD */
+            out.println("<center><div class='col-sm-6'>");
+                out.println("<div class='card' style='width: 100%'>");
+                    out.println("<div class=\"card-body\">");
+                        out.println("<h5 class=\"card-title h5fonte\">Juros Simples</h5>");
+                        out.println("<h4 class=\"card-text h4fonte\">Insira os dados pedidos abaixo para que o cálculo do juros seja realizado.</h4>");
+                        out.println("<form>");
+                        out.println("<table>");
+                            out.println("<tr><td><input type='text' name='capital' placeholder='Insira o capital'/></tr></td>");
+                            out.println("<tr><td><input type='text' name='taxa' placeholder='Insira a taxa de juros'/></tr></td>");
+                            out.println("<tr><td><input type='text' name='tempo' placeholder='Insira o período (meses)'/></tr></td>");
+                        out.println("</table>");
+                        out.println("<br><input class=\"h4fonte btn btn-primary\" type='submit' value='Calcular' />");
+                    out.println("</form>");
+                    out.println("</div>");
+                out.println("</div>");
+            out.println("</div></center><hr>"); 
+            /* FIM CARD */
+            
+            /* CÁLCULO DO JUROS SIMPLES */
             try{
-             double c = 0;
-             double tx = 0;
-             double t = 0;
+             double c = Double.parseDouble(request.getParameter("capital"));
+             double tx = Double.parseDouble(request.getParameter("taxa"));
+             double p = Double.parseDouble(request.getParameter("tempo"));
                 
-                    double j = (c*tx*t)/100;
-                    out.println("Juros simples: "+j);
+            tx = tx / 100;
+            double juros = (c * tx * p);
+            double total = c + juros; 
+                    
+            DecimalFormat x = new DecimalFormat("#.00");
+            String jurosTotal = x.format(juros);
+            String valorTotal = x.format(total);
                 
-                }catch(Exception ex){
-                out.println("Entrar com um valor válido acima.");
+            out.println("<h4 class='h4fonte'>Valor do Juros: R$" + jurosTotal);
+            out.println("<h4 class='h4fonte'>Valor total a ser pago: R$" + valorTotal);
+                
+            }catch(Exception ex){
+                out.println("<h4 class='h4fonte'>Entrar com um valor válido acima.</h4>");
             }
+            /* FIM DO CÁLCULO */
+            
+            /* INICIO RODAPÉ */
+            out.println("<hr>");
+            out.println("<footer class='foot2'>");
+                out.println("<h4 class='h4fonte'>Gostou do aplicativo? Nos mande a sua opinião: <a href=\"mailto:example@example.com\">juroseasy@outlook.com</a></h4>");
+                out.println("<h4 class='h4fonte'>Desenvolvido em: Março/2018</h4>");
+            out.println("</footer>");
+            /* FIM RODAPÉ */
+            
+            /* SCRIPTS */
+            out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
+            out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>");
+            out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>");
+            out.println("<src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>");
             
             out.println("</body>");
             out.println("</html>");
