@@ -38,7 +38,7 @@ public class JurosSimples extends HttpServlet {
             out.println("</nav>");
             /* FIM NAVBAR */
             
-                out.println("<a href=\"home.html\"><img border=\"0\" alt=\"voltar\" src=\"imagens/voltar.jpg\" width=\"168\" height=\"86\"></a><hr>");
+            out.println("<a href=\"home.html\"><img border=\"0\" alt=\"voltar\" src=\"imagens/voltar.jpg\" width=\"145\" height=\"70\"></a><hr>");
             
             /* INICIO CARD */
             out.println("<center><div class='col-sm-6'>");

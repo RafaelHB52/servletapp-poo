@@ -38,13 +38,13 @@ public class JurosCompostos extends HttpServlet {
             out.println("</nav>");
             /* FIM NAVBAR */
             
-                out.println("<a href=\"home.html\"><img border=\"0\" alt=\"voltar\" src=\"imagens/voltar.jpg\" width=\"168\" height=\"86\"></a><hr>");
+                out.println("<a href=\"home.html\"><img border=\"0\" alt=\"voltar\" src=\"imagens/voltar.jpg\" width=\"145\" height=\"70\"></a><hr>");
             
             /* INICIO CARD */
             out.println("<center><div class='col-sm-6'>");
                 out.println("<div class='card' style='width: 100%'>");
                     out.println("<div class=\"card-body\">");
-                        out.println("<h5 class=\"card-title h5fonte\">Juros Composto</h5>");
+                        out.println("<h5 class=\"card-title h5fonte\">Juros Compostos</h5>");
                         out.println("<h4 class=\"card-text h4fonte\">Insira os dados pedidos abaixo para que o cálculo do juros seja realizado.</h4>");
                         out.println("<form>");
                         out.println("<table>");
@@ -59,7 +59,7 @@ public class JurosCompostos extends HttpServlet {
             out.println("</div></center><hr>"); 
             /* FIM CARD */
             
-            /* CÁLCULO DO JUROS SIMPLES */
+            /* CÁLCULO DO JUROS COMPOSTOS */
             try{
              double c = Double.parseDouble(request.getParameter("capital"));
              double tx = Double.parseDouble(request.getParameter("taxa"));
@@ -87,7 +87,6 @@ public class JurosCompostos extends HttpServlet {
                 out.println("<h4 class='h4fonte'>Gostou do aplicativo? Nos mande a sua opinião: <a href=\"mailto:example@example.com\">juroseasy@outlook.com</a></h4>");
                 out.println("<h4 class='h4fonte'>Desenvolvido em: Março/2018</h4>");
             out.println("</footer>");
-            
             /* FIM RODAPÉ */
             
             /* SCRIPTS */
