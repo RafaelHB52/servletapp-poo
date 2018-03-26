@@ -66,7 +66,7 @@ public class Home extends HttpServlet {
                 out.println("</div>");
             out.println("</div>");
             out.println("<br><br><br><br><hr>");
-            /* FIM CARDS DESENVOLVEDORES */
+            /* FIM CARDS JUROS */
 
             out.println("<div class=\"container\">");
                 out.println("<h5 class=\"h5fonte\">Desenvolvido por:</h5>");
