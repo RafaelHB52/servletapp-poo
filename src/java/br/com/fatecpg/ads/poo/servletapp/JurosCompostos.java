@@ -75,6 +75,26 @@ public class JurosCompostos extends HttpServlet {
                 
             out.println("<h4 class='h4fonte'>Valor do Juros: R$" + jurosTotal);
             out.println("<h4 class='h4fonte'>Valor total a ser pago: R$" + valorTotal);
+            
+            String display = x.format(c); 
+            out.println("<div class=\"card card-body\">");
+                out.println("<div class=\"container\"><center><table class=\"table\">"); 
+                    out.println("<thead class=\"thead-dark\"><tr>");
+                    out.println("<th scope=\"col\"><center>Mês</center></th><th scope=\"col\"><center>Valor da Parcela</center></th>");
+                    out.println("</tr></thead>");
+                        for (int i = 0; i < p; i++){
+                            c = c + (c * tx);
+                            display = x.format(c);  
+                    
+                        if (i % 2 == 0)
+                            out.println("<tbody><tr class='container impar'><td>"+(i+1)+"</td><td>R$ "+display+"</td></tr>");
+                        else 
+                            out.println("<tr class='container par'><td>"+(i+1)+"</td><td>R$ "+display+"</td></tr></tbody>");
+
+                        }
+                    out.println("</table></center>");
+                out.println("</div>");
+            out.println("</div>");
                 
             }catch(Exception ex){
                 out.println("<h4 class='h4fonte'>Entrar com um valor válido acima.</h4>");
@@ -83,7 +103,7 @@ public class JurosCompostos extends HttpServlet {
             
             /* INICIO RODAPÉ */
             out.println("<hr>");
-            out.println("<footer class='foot2'>");
+            out.println("<footer class='foot'>");
                 out.println("<h4 class='h4fonte'>Gostou do aplicativo? Nos mande a sua opinião: <a href=\"mailto:example@example.com\">juroseasy@outlook.com</a></h4>");
                 out.println("<h4 class='h4fonte'>Desenvolvido em: Março/2018</h4>");
             out.println("</footer>");
