@@ -69,29 +69,26 @@ public class JurosCompostos extends HttpServlet {
             double juros = c * ((Math.pow((1 + tx),p)) - 1);
             double total = c + juros; 
                     
-            DecimalFormat x = new DecimalFormat("#.00");
-            String jurosTotal = x.format(juros);
-            String valorTotal = x.format(total);
+            DecimalFormat decimal = new DecimalFormat("#.00");
+            String jurosTotal = decimal.format(juros);
+            String valorTotal = decimal.format(total);
                 
             out.println("<h4 class='h4fonte'>Valor do Juros: R$" + jurosTotal);
             out.println("<h4 class='h4fonte'>Valor total a ser pago: R$" + valorTotal);
             
-            String display = x.format(c); 
+            String tot = decimal.format(c); 
             out.println("<div class=\"card card-body\">");
                 out.println("<div class=\"container\"><center><table class=\"table\">"); 
-                    out.println("<thead class=\"thead-dark\"><tr>");
-                    out.println("<th scope=\"col\"><center>Mês</center></th><th scope=\"col\"><center>Valor da Parcela</center></th>");
+                    out.println("<thead class=\"thead-dark\"><tr class='table-active'>");
+                    out.println("<th scope=\"row\"><center>Mês</center></th><th scope=\"row\"><center>Valor da Parcela</center></th>");
                     out.println("</tr></thead>");
                         for (int i = 0; i < p; i++){
                             c = c + (c * tx);
-                            display = x.format(c);  
-                    
-                        if (i % 2 == 0)
-                            out.println("<tbody><tr class='container impar'><td>"+(i+1)+"</td><td>R$ "+display+"</td></tr>");
-                        else 
-                            out.println("<tr class='container par'><td>"+(i+1)+"</td><td>R$ "+display+"</td></tr></tbody>");
-
+                            tot = decimal.format(c);  
+                            
+                            out.println("<tbody><tr class='container table table-hover'><td><center>"+(i+1)+"</center></td><td><center>R$ "+tot+"</center></td></tr>");
                         }
+                        
                     out.println("</table></center>");
                 out.println("</div>");
             out.println("</div>");

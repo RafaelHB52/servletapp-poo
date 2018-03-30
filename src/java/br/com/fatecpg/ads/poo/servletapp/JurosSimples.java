@@ -69,9 +69,9 @@ public class JurosSimples extends HttpServlet {
             double juros = (c * tx * p);
             double total = c + juros; 
                     
-            DecimalFormat x = new DecimalFormat("#.00");
-            String jurosTotal = x.format(juros);
-            String valorTotal = x.format(total);
+            DecimalFormat decimal = new DecimalFormat("#.00");
+            String jurosTotal = decimal.format(juros);
+            String valorTotal = decimal.format(total);
                 
             out.println("<h4 class='h4fonte'>Valor do Juros: R$" + jurosTotal);
             out.println("<h4 class='h4fonte'>Valor total a ser pago: R$" + valorTotal);
@@ -82,12 +82,11 @@ public class JurosSimples extends HttpServlet {
             /* FIM DO CÁLCULO */
             
             /* INICIO RODAPÉ */
-            out.println("<hr>");
-            out.println("<footer class='foot2'>");
+            out.println("<hr/>");
+            out.println("<footer class='foot'>");
                 out.println("<h4 class='h4fonte'>Gostou do aplicativo? Nos mande a sua opinião: <a href=\"mailto:example@example.com\">juroseasy@outlook.com</a></h4>");
                 out.println("<h4 class='h4fonte'>Desenvolvido em: Março/2018</h4>");
             out.println("</footer>");
-            
             /* FIM RODAPÉ */
             
             /* SCRIPTS */
